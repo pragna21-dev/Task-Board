@@ -1,0 +1,37 @@
+/* Common*/
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f3f8f6;
+  color: #134e4a;
+}
+
+/* Header */
+.task-header {
+  background-color: #134e4a;
+  color: #ffffff;
+  padding: 20px 10px;
+}
+
+.logo {
+}
+.logo h1 {
+  font-size: 26px;
+  margin: 0;
+}
+.logo p {
+  color: #d1fae5;
+  font-size: 15px;
+  margin: 5px 0 0;
+}
+
+.logo-icon {
+  background-color: #0f766e;
+  color: #ffffff;
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  /* font-size: 24px; */
+  font-weight: bold;
+  padding: 5px 10px;
+}
