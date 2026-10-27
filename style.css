@@ -1,4 +1,8 @@
 /* Common*/
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -13,8 +17,6 @@ body {
   padding: 20px 10px;
 }
 
-.logo {
-}
 .logo h1 {
   font-size: 26px;
   margin: 0;
@@ -34,4 +36,130 @@ body {
   /* font-size: 24px; */
   font-weight: bold;
   padding: 5px 10px;
+}
+/*------------------------------------------------------------------------------------*/
+
+.container {
+  max-width: 1200px;
+  margin: 15px auto;
+  padding: 0 20px;
+}
+/* Task form card */
+.task-form {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(19, 78, 74, 0.08);
+}
+
+.task-form h2 {
+  margin: 0 0 22px;
+  font-size: 24px;
+}
+/* Form Flexbox */
+#taskForm {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  gap: 16px;
+  width: 100%;
+}
+
+/* Textarea */
+.task-description {
+  flex: 2;
+  min-width: 0;
+}
+
+/* Priority Dropdown */
+.priority-group {
+  flex: 1;
+  min-width: 150px;
+}
+/* Textarea and Select */
+#taskForm textarea,
+#taskForm select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5d1;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: #134e4a;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+#taskForm textarea:focus,
+#taskForm select:focus {
+  outline: none;
+  border-color: #134e4a;
+  box-shadow: 0 0 0 3px rgba(19, 78, 74, 0.12);
+}
+
+/* Add Button */
+.add-btn {
+  min-height: 44px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: #134e4a;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.add-btn:hover {
+  background-color: #0f3f3c;
+}
+
+/* Footer */
+.task-footer {
+  background-color: #134e4a;
+  color: #ffffff;
+  text-align: center;
+  padding: 12px;
+  margin-top: 30px;
+}
+
+.task-footer p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/*------------------------------------------------------------------------------------*/
+
+/* Mobile View */
+@media (max-width: 600px) {
+  #taskForm {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .task-description,
+  .priority-group {
+    width: 100%;
+    flex: auto;
+    min-width: 0;
+  }
+
+  #taskForm textarea,
+  #taskForm select {
+    width: 100%;
+  }
+
+  #taskForm .add-btn {
+    width: 100%;
+  }
+
+  .task-form {
+    padding: 18px;
+  }
+
+  .task-form h2 {
+    font-size: 21px;
+    margin-bottom: 18px;
+  }
 }

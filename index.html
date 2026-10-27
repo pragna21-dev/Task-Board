@@ -7,19 +7,33 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- Header -->
     <header class="task-header">
       <div class="logo">
         <h1><span class="logo-icon">✓</span> My Task Board</h1>
-        <p>Manage your task smarter</p>
+        <p>Manage your tasks smarter</p>
       </div>
     </header>
-    <nav>
-      <a></a>
-    </nav>
-    <main>
-      <section id="add-task">
+
+    <main class="container">
+      <section class="task-form">
         <h2>Add New Task</h2>
-        <form></form>
+
+        <form id="taskForm">
+          <div class="task-description">
+            <textarea id="task" name="task" rows="2" placeholder="Enter your task..." required></textarea>
+          </div>
+          <div class="priority-group">
+            <select id="priority" name="priority" required>
+              <option value="" disabled selected>Select Priority</option>
+              <option value="high">High</option>
+              <option value="medium">Medium</option>
+              <option value="low">Low</option>
+            </select>
+          </div>
+
+          <button type="submit" class="add-btn">+ Add Task</button>
+        </form>
       </section>
       <section>
         <h2>Task List</h2>
@@ -29,6 +43,9 @@
       </section>
     </main>
 
-    <footer>My Task Board 2027</footer>
+    <!-- Footer -->
+    <footer class="task-footer">
+      <p>My Task Board 2027</p>
+    </footer>
   </body>
 </html>
