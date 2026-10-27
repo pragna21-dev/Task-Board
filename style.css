@@ -8,6 +8,7 @@ body {
   font-family: Arial, sans-serif;
   background-color: #f3f8f6;
   color: #134e4a;
+  min-height: 100vh;
 }
 
 /* Header */
@@ -130,16 +131,57 @@ body {
 .task-footer {
   background-color: #134e4a;
   color: #ffffff;
-  text-align: center;
   padding: 12px;
   margin-top: 30px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 .task-footer p {
   margin: 0;
   font-size: 14px;
 }
+.message-btn {
+  position: fixed;
+  right: 25px;
+  bottom: 25px;
 
+  /* display: flex;
+  align-items: center;
+  gap: 8px; */
+
+  background: linear-gradient(135deg, #369fc5, #4f79a5);
+  color: #ffffff;
+
+  border: none;
+  border-radius: 30px;
+  padding: 14px 22px;
+
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.message-btn:hover {
+  background: #245f80;
+}
+
+.message-icon {
+  font-size: 18px;
+}
+.message-round {
+  width: 55px;
+  height: 55px;
+  padding: 0;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 24px;
+}
 /*------------------------------------------------------------------------------------*/
 
 /* Mobile View */
