@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Task Board</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -19,6 +21,30 @@
     </header>
 
     <main class="container">
+      <!-- Statistics Section -->
+      <section class="grid grid-cols-1 sm:grid-cols-3 gap-4 my-6">
+        <!-- Total Tasks -->
+        <div class="bg-blue-100 p-5 rounded-xl shadow-sm border border-blue-200">
+          <p class="text-blue-700 text-sm font-medium">Total Tasks</p>
+
+          <h2 class="text-3xl font-bold text-blue-800 mt-2">10</h2>
+        </div>
+
+        <!-- Done Tasks -->
+        <div class="bg-green-100 p-5 rounded-xl shadow-sm border border-green-200">
+          <p class="text-green-700 text-sm font-medium">Done Tasks</p>
+
+          <h2 class="text-3xl font-bold text-green-800 mt-2">4</h2>
+        </div>
+
+        <!-- High Priority Tasks -->
+        <div class="bg-red-100 p-5 rounded-xl shadow-sm border border-red-200">
+          <p class="text-red-700 text-sm font-medium">High Priority</p>
+
+          <h2 class="text-3xl font-bold text-red-800 mt-2">3</h2>
+        </div>
+      </section>
+
       <section class="task-form">
         <h2>Add New Task</h2>
         <form id="taskForm">
@@ -36,11 +62,75 @@
           <button type="submit" class="add-btn">+ Add Task</button>
         </form>
       </section>
-      <section>
-        <h2>Task List</h2>
-        <ol>
-          <li></li>
-        </ol>
+      <!-- Task List -->
+      <section class="mt-6">
+        <h2 class="text-xl font-bold text-gray-800 mb-4">My Tasks</h2>
+
+        <div class="space-y-3">
+          <!-- Task 1 -->
+          <div class="flex items-center gap-3 bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
+            <input type="checkbox" class="h-4 w-4" />
+
+            <span class="flex-1 text-gray-800"> Complete HTML structure </span>
+
+            <span class="bg-red-100 text-red-700 text-xs font-semibold px-3 py-1 rounded-full"> High </span>
+            <button type="button" aria-label="Delete Complete HTML structure" class="text-red-600 hover:text-red-800 p-2 rounded-lg hover:bg-red-50">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </div>
+
+          <!-- Task 2 -->
+          <div class="flex items-center gap-3 bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
+            <input type="checkbox" class="h-4 w-4" />
+
+            <span class="flex-1 text-gray-800">Css Learn </span>
+
+            <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full"> Medium </span>
+
+            <button type="button" aria-label="Delete Css learn" class="text-red-600 hover:text-red-800 p-2 rounded-lg hover:bg-red-50">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </div>
+
+          <!-- Task 3 -->
+          <div class="flex items-center gap-3 bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
+            <input type="checkbox" class="h-4 w-4" />
+
+            <span class="flex-1 text-gray-800"> Learn Tailwind Flexbox </span>
+
+            <span class="bg-red-100 text-red-700 text-xs font-semibold px-3 py-1 rounded-full"> High </span>
+
+            <button type="button" aria-label="Delete Learn Tailwind Flexbox" class="text-red-600 hover:text-red-800 p-2 rounded-lg hover:bg-red-50">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </div>
+
+          <!-- Task 4 -->
+          <div class="flex items-center gap-3 bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
+            <input type="checkbox" class="h-4 w-4" />
+
+            <span class="flex-1 text-gray-800"> Style the task form </span>
+
+            <span class="bg-green-100 text-green-800 text-xs font-semibold px-3 py-1 rounded-full"> Low </span>
+
+            <button type="button" aria-label="Delete Style the task form" class="text-red-600 hover:text-red-800 p-2 rounded-lg hover:bg-red-50">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </div>
+
+          <!-- Task 5 -->
+          <div class="flex items-center gap-3 bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
+            <input type="checkbox" class="h-4 w-4" />
+
+            <span class="flex-1 text-gray-800"> Make the page responsive </span>
+
+            <span class="bg-yellow-100 text-yellow-800 text-xs font-semibold px-3 py-1 rounded-full"> Medium </span>
+
+            <button type="button" aria-label="Delete Make the page responsive" class="text-red-600 hover:text-red-800 p-2 rounded-lg hover:bg-red-50">
+              <i class="fa-solid fa-trash"></i>
+            </button>
+          </div>
+        </div>
       </section>
     </main>
 
