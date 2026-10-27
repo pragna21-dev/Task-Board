@@ -10,15 +10,17 @@
     <!-- Header -->
     <header class="task-header">
       <div class="logo">
-        <h1><span class="logo-icon">✓</span> My Task Board</h1>
-        <p>Manage your tasks smarter</p>
+        <span class="logo-icon">✓</span>
+        <div class="logo-text">
+          <h1>My Task Board</h1>
+          <p>Manage your tasks smarter</p>
+        </div>
       </div>
     </header>
 
     <main class="container">
       <section class="task-form">
         <h2>Add New Task</h2>
-
         <form id="taskForm">
           <div class="task-description">
             <textarea id="task" name="task" rows="2" placeholder="Enter your task..." required></textarea>
@@ -31,7 +33,6 @@
               <option value="low">Low</option>
             </select>
           </div>
-
           <button type="submit" class="add-btn">+ Add Task</button>
         </form>
       </section>
